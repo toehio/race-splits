@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Splits</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/jquery/jquery.mobile-1.4.2.min.css">
+    <script src="lib/jquery/jquery-2.1.0.min.js"></script>
+    <script src="lib/jquery/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/splits.js"></script>
+    <style>
+      #edit_race_csv { width: 100%; height: 200px;}
+      #edit_race-popup { width: 90%; left: 5%; right: 5%;}
+    </style>
+  </head>
+  <body>
+    <div data-role="page" id="splits">
+      <div data-role="popup" id="new_race" data-theme="a" data-overlay-theme="a" class="ui-corner-all">
+        <form id="new_race_form">
+              <div style="padding:10px 20px;">
+                  <input type="text" id="new_race_name" placeholder="Race name" autofocus="autofocus">
+                  <button type="submit" id="new_race_submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Create</button>
+              </div>
+          </form>
+      </div>
+
+      <div data-role="panel" id="splits_panel" data-position="right" data-display="overlay" data-dismissible="false">
+        <pre id="splits_pp"></pre>
+        <a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-delete">close</a>
+      </div>
+
+      <div data-role="header">
+        <center>
+          <select name="select-custom-1" id="select_race" data-native-menu="false">
+          </select>
+        </center>
+        <a href="#new_race" data-rel="popup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus">New Race</a>
+        <a id="edit_race_button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left  ui-icon-edit">Edit Start List</a>
+      </div>
+
+      <div role="main" class="ui-content">
+        <div id="numbers" class=""></div>
+        <a id="reset_race" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left  ui-icon-edit">Reset Race</a>
+      </div>
+
+      <div data-role="footer">
+        <a id="download_races" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left  ui-icon-arrow-d">Download All Races</a>
+        <a id="upload_races" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left  ui-icon-arrow-u">Upload All Races</a>
+      </div>
+
+    </div>
+  </body>
+</html>
